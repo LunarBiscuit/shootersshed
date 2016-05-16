@@ -1,9 +1,9 @@
 /*!
- * fastshell
- * Fiercely quick and opinionated front-ends
- * https://HosseinKarami.github.io/fastshell
- * @author Hossein Karami
- * @version 1.0.5
+ * Lunar'sFastshell
+ * WIP
+ * https://LunarBiscuit.github.io/fastshell
+ * @author Gareth Parker
+ * @version 0.0.1
  * Copyright 2016. MIT licensed.
  */
 (function ($, window, document, undefined) {

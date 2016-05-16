@@ -35,11 +35,11 @@ gulp.task('css', function () {
     return gulp.src('src/scss/style.scss')
     .pipe(sass({errLogToConsole: true}))
     .pipe(autoprefixer('last 4 version'))
-    .pipe(gulp.dest('app/assets/css'))
+    .pipe(gulp.dest('dist/assets/css'))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min' }))
     .pipe(header(banner, { pkg : pkg }))
-    .pipe(gulp.dest('app/assets/css'))
+    .pipe(gulp.dest('dist/assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -48,17 +48,17 @@ gulp.task('js',function(){
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(header(banner, { pkg : pkg }))
-    .pipe(gulp.dest('app/assets/js'))
+    .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
     .pipe(header(banner, { pkg : pkg }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('app/assets/js'))
+    .pipe(gulp.dest('dist/assets/js'))
     .pipe(browserSync.reload({stream:true, once: true}));
 });
 
 gulp.task('bower', function()
 {
-    // move main bower files into components
+    // TODO concat all the bower components into a single css and js file then push them across and inject after
     return gulp.src(mainBowerFiles())
       .pipe(gulp.dest('dist/assets/components'));
 });
@@ -66,18 +66,18 @@ gulp.task('bower', function()
 gulp.task('inject', function()
 {
 
-  // inject bower deps into index.handlebars
+  // inject bower deps into index.handlebars OLD: 'src/pages/partials/*.handlebars'
 
-	return gulp.src('src/pages/partials/*.handlebars')
+	return gulp.src('dist/index.html')
 		.pipe(using())
 		.pipe(wiredep({
       directory: 'dist/assets/bower_components'
 		}))
-    .pipe(gulp.dest('src/pages/partials/'));
+    .pipe(gulp.dest('dist'));
 
 });
 
-gulp.task('html', ['inject'], function(){
+gulp.task('html', function(){
 
   // Build Handlebars into HTML
   var templateData = tcfg,
@@ -97,10 +97,16 @@ gulp.task('html', ['inject'], function(){
 
 });
 
+gulp.task('build-html', ['html'], function()
+{
+    // Inject the deps
+    return gulp.start('inject');
+});
+
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
         server: {
-            baseDir: 'app'
+            baseDir: 'dist'
         }
     });
 });
@@ -108,8 +114,8 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'html', 'browser-sync'], function () {
+gulp.task('default', ['css', 'js', 'build-html', 'browser-sync'], function () {
     gulp.watch('src/scss/*/*.scss', ['css']);
     gulp.watch('src/js/*.js', ['js']);
-    gulp.watch('app/*.html', ['bs-reload']);
+    gulp.watch('dist/*.html', ['bs-reload']);
 });
