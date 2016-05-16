@@ -1,14 +1,26 @@
-# FastShell
-[![Build Status](https://travis-ci.org/HosseinKarami/fastshell.png?branch=master)](https://travis-ci.org/HosseinKarami/fastshell)
+# Lunar's FastShell
 
-inspired by [FireShell](http://getfireshell.com)
+Inspired by [FireShell](http://getfireshell.com)
 Fiercely quick front-end boilerplate and workflows.
 
 The opinionated FastShell framework. Built for the modern developer. For teams and the individual, encouraging a better workflow. JavaScript task running, build processes, autominification and file concatenation, wrapped with an enhanced HTML5 boilerplated framework.
 
-* Source: [github.com/HosseinKarami/fastshell](http://github.com/HosseinKarami/fastshell)
-* Documentation: [DOCS.md](https://github.com/HosseinKarami/fastshell/blob/master/DOCS.md)
-* HomePage: [Fastshell](https://HosseinKarami.github.io/fastshell)
+Part of the Lunarplates suite:
+* fastshell fork - for websites that don't require MVC or app structure.
+* Angular2 Seed - Typescript and Angular2 boilerplate project (coming soon, possibly based on John papa's work)
+* Angular1 Seed - For basic Angular Applications (coming soon)
+
+
+* Source: [github.com/LunarBiscuit/fastshell](http://github.com/LunarBiscuit/fastshell)
+* Forked from: [github.com/HosseinKarami/fastshell](github.com/HosseinKarami/fastshell)
+* Documentation: [DOCS.md](https://github.com/LunarBiscuit/fastshell/blob/master/DOCS.md)
+
+
+# New Features
+The following features have been added since the initial fork.
+
+* Added Bower
+* Added Handlebars for HTML partials support
 
 
 ## License
