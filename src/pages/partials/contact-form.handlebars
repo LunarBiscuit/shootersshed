@@ -1,0 +1,61 @@
+
+<form class="form-horizontal" method="POST" action="/server/message.php">
+            
+    <input type="hidden" name="hnpt" value="" />
+    <!-- Form Name -->
+    <h1 class="mainHeader">Contact Form</h1>
+    <div class="well col-xs-12">
+        <p>Please send an email and we will get back to you as soon as possible.</p>
+        <p>Leave a phone number in the message if you’d prefer to be called back.</p>
+    </div>
+    <fieldset>
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="subject">Subject</label>  
+        <div class="col-md-6">
+        <input id="subject" name="subject" type="text" placeholder="Enter Subject..." class="form-control input-md" required="">
+        <span class="help-block">Please enter a meaningful subject</span>  
+        </div>
+    </div>
+    
+    <!-- User -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="name">Name</label>
+        <div class="col-md-6">
+        
+            <input id="name" name="name" class="form-control" placeholder="Your name..." type="text" required="">
+        
+        <p class="help-block">Please enter your name</p>
+        </div>
+    </div>
+    
+    <!-- Email -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="email">Email</label>
+        <div class="col-md-6">
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input id="email" name="email" class="form-control" placeholder="Email Address" type="text" required="">
+        </div>
+        <p class="help-block">Please enter a valid email</p>
+        </div>
+    </div>
+    
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="message">Message</label>
+        <div class="col-md-4">                     
+        <textarea class="form-control" id="message" placeholder="Message here..." name="message"></textarea>
+        </div>
+    </div>
+    
+    <!-- Button -->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="submit">Submit</label>
+        <div class="col-md-4">
+        <button id="submit" name="submit" class="button dark">Send</button>
+        </div>
+    </div>
+    
+    </fieldset>
+</form>

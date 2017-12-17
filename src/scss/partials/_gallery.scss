@@ -1,0 +1,123 @@
+// ===================
+// Portfolio
+// ===================
+.gallery-content {
+    padding: 2%;
+    min-height: 100vh;
+    justify-items: center;
+    width: 900px;
+    margin: 0 auto;
+  }
+
+.portfolio {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(9, 100px);
+  grid-template-columns: repeat(5, 150px);
+  grid-gap: 20px;
+  
+}
+
+.portfolio-item {
+  background: $accent;
+  background-size: cover;
+  background-repeat: none;
+  color: $light-gray;
+  font-weight: $font-bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  // Refractored the code a little from the video.
+  // Moved these from the .two, thought it made
+  // more sense like this.
+  font-size: 1.5em;
+  background-position: center;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 10;
+  transition: none;
+  
+  &.small {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  
+  &.medium {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  
+  &.large {
+    grid-row: span 3;
+    grid-column: span 3;
+  }
+  
+  &.tall {
+    grid-row: span 3;
+    grid-column: span 2;
+  }
+  
+  &.wide {
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+    
+  &:hover {
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+    outline: 2px solid white;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    background: #000;
+    border: 2px solid $orange;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+  }
+  
+  &:hover::before {
+    opacity: 0.1;
+    border: 0px solid white;
+  }
+}
+
+.poker {
+    background-image: url(http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/Poker.jpg);
+  }
+
+.party-booth3 {
+  background-image: url(http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/Party_booth3.jpg);
+}
+
+.shedoutside {
+    background-image: url(http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/SHED_outside_sign.jpg);
+  }
+
+.upstairs-bar {
+  background-image: url('http://res.cloudinary.com/lunartech/image/upload/v1510429857/ShootersShed/Upstairs_bar_to_shed.jpg');
+}
+
+.shooters-back-room {
+  background-image: url('http://res.cloudinary.com/lunartech/image/upload/v1510429831/ShootersShed/ShootersLtd2BACK_ROOM_WHOLE-22.jpg');
+}
+
+.shed-floor {
+  background-image: url('http://res.cloudinary.com/lunartech/image/upload/v1510429850/ShootersShed/Shed9.jpg')
+}
+
+.steampunk-bar {
+  background-image: url('http://res.cloudinary.com/lunartech/image/upload/v1510429852/ShootersShed/Upstairs_glasses.jpg')
+}
+
+.shooters-vip {
+  background-image: url('http://res.cloudinary.com/lunartech/image/upload/v1510429841/ShootersShed/ShootersLtd2Party-18.jpg')
+}

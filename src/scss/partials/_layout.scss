@@ -1,0 +1,149 @@
+/* Responsive: */
+
+@media only screen and (min-width: 640px) {
+
+  .layout {
+    padding-top: 50px;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background-attachment: fixed;
+    padding: 3em;
+    text-align: center;
+  }
+
+    .entry-layout {
+      display: flex;
+      height: 100%;
+
+      .img-overlay {
+        padding-top: 100px;
+        padding: 3em;
+        padding-top: 10rem;
+        text-align: center;
+        height: 100vh;
+        position: relative;
+      }
+
+      .textContainer {
+        max-width: 550px;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  /* etc */
+  
+  body, html {
+    margin: 0em;
+    height: 100%;
+  }
+  
+  .website-container {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    position: relative;
+
+    font-size: 1.9rem;
+  }
+
+  .logo-header {
+    margin: 0 auto;
+    max-width: 400px;
+
+    img {
+      max-width: 49%;
+    }
+  }
+  
+  .col {
+    background: #222;
+    position: relative;
+
+  }
+  
+  /* Layout: for the entry */
+  
+  .col-main {
+    flex: 1;  
+    align-items: center;
+    border-right: 1px solid #020202;
+    color: white;
+    transition: flex .4s 0s  ease-in;
+    -webkit-transform: translate3d(0, 0, 0);
+    z-index: 0;
+    
+    &.img-overlay:hover::before {
+      background-color: rgba(0,0,0,0.65)
+    }
+    
+      &:hover {
+      flex: 1.5
+    }
+  }  
+  
+  .col-complementary {
+    flex: 1;  
+    background: #1a1a1a;
+    align-items: center;
+    color: white;
+    transition: flex .4s 0s ease-in;
+    z-index: 0;
+    
+    &.img-overlay:hover::before {
+      background-color: rgba(0,0,0,0.65)
+    }
+    
+      &:hover {
+      flex: 1.5
+    }
+    
+  }
+ 
+  .img-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+    margin: 0 0 0;
+    display: block;
+    z-index: -1;
+  }
+
+  .img-overlay.dark::before {
+    background: rgba(0,0,0,0.90);
+  }
+
+  .lead-img {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .bg-img {
+    background-size: cover;
+  }
+
+  .bg-left {
+    background-position: left bottom;
+  }
+  
+  .bg-right {
+    background-position: right bottom;
+  }
+
+  .bg-shooters {
+    background-image: url('http://res.cloudinary.com/lunartech/image/upload/c_scale,w_2091/v1510429859/ShootersShed/Upstairs_bar12.jpg')
+  }
+
+  .bg-shed {
+    background-image: url('http://res.cloudinary.com/lunartech/image/upload/c_scale,w_2116/v1510429850/ShootersShed/Shed9.jpg');
+    &.dark {
+      background-image: url('http://res.cloudinary.com/lunartech/image/upload/e_brightness:-90/v1510429850/ShootersShed/Shed9.jpg');
+    }
+  }

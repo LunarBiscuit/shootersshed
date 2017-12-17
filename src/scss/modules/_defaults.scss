@@ -5,14 +5,33 @@
 }
 html {
   font-size: 62.5%;
-
+  background: #000;
 }
 body {
-  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
+  /*font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;*/
   color: #444;
-  transition: all .4s .3s ease-in;
+  /*transition: all .4s .3s ease-in;*/
+  .entry-layout {
+    animation: .3s ease-out 0s 1 gracefulEntry;
+  }
+  font-family: $sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.45;
 }
 body,html{
 	min-height: 100%;
-	overflow: auto;
+  overflow: auto;
+  background: #000;
+}
+
+@keyframes gracefulEntry {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
 }

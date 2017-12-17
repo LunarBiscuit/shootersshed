@@ -1,0 +1,27 @@
+form {
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    fieldset {
+        border: $orange;
+        background-color: #FFF;
+        color: #000; 
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 4rem;
+        text-align: left;
+    }
+
+    h1 {
+        color: $orange;
+    }
+
+    .well {
+        background: $orange;
+        margin: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        border: 0;
+    }
+}

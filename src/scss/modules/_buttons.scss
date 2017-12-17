@@ -1,0 +1,13 @@
+.button {
+    border: 2px solid #ffffff;
+    padding: 0.3rem 1rem;
+    background: transparent;
+    color: rgba(255,255,255,0.9);
+    border-radius: 1px;
+
+    &.dark {
+        background: #000;
+        color: #fff;
+        border: 1px solid $orange;
+    }
+}

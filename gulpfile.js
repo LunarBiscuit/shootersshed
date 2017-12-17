@@ -68,7 +68,7 @@ gulp.task('inject', function()
 
   // inject bower deps into index.handlebars OLD: 'src/pages/partials/*.handlebars'
 
-	return gulp.src('dist/index.html')
+	return gulp.src('dist/*.html')
 		.pipe(using())
 		.pipe(wiredep({
       directory: 'dist/assets/bower_components'
@@ -117,5 +117,7 @@ gulp.task('bs-reload', function () {
 gulp.task('default', ['css', 'js', 'build-html', 'browser-sync'], function () {
     gulp.watch('src/scss/*/*.scss', ['css']);
     gulp.watch('src/js/*.js', ['js']);
+    gulp.watch('src/pages/**/*.handlebars', ['build-html']);
     gulp.watch('dist/*.html', ['bs-reload']);
+    gulp.watch('dist/assets/css/*.css', ['bs-reload']);
 });
