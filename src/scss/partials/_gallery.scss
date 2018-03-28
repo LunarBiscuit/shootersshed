@@ -79,63 +79,59 @@
     height: initial;
     width: auto;
   
-  &:hover::before {
-    opacity: 0.1;
-    border: 0 solid white;
-    cursor: pointer;
-    
-    &.small {
-      grid-row: span 1;
-      grid-column: span 1;
-    }
-    
-    &.medium {
-      grid-row: span 2;
-      grid-column: span 2;
-    }
-    
-    &.large {
-      grid-row: span 3;
-      grid-column: span 3;
-    }
-    
-    &.tall {
-      grid-row: span 3;
-      grid-column: span 2;
-    }
-    
-    &.wide {
-      grid-row: span 2;
-      grid-column: span 3;
-    }
-
-    &::before {
-      content: '';
-      display: block;
-      background: #000;
-      border: 2px solid $orange;
-      opacity: 0.7;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transition: all ease-in-out 300ms;
-      z-index: -1;
-    }
-
     &:hover::before {
       opacity: 0.1;
-      border: 0px solid white;
+      border: 0 solid white;
+      cursor: pointer;
     }
-  }
-    
-  
+      
+      &.small {
+        grid-row: span 1;
+        grid-column: span 1;
+      }
+      
+      &.medium {
+        grid-row: span 2;
+        grid-column: span 2;
+      }
+      
+      &.large {
+        grid-row: span 3;
+        grid-column: span 3;
+      }
+      
+      &.tall {
+        grid-row: span 3;
+        grid-column: span 2;
+      }
+      
+      &.wide {
+        grid-row: span 2;
+        grid-column: span 3;
+      }
 
-  
-  
-  
-}
+      &::before {
+        content: '';
+        display: block;
+        background: #000;
+        border: 2px solid $orange;
+        opacity: 0.7;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: all ease-in-out 300ms;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        opacity: 0.1;
+        border: 0px solid white;
+      }
+    }
+      
+  }
 
 #lightbox {
   display: none;

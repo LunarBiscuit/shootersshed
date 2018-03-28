@@ -1,4 +1,5 @@
 $nav-bg: rgba(0,0,0,0.8);
+$nav-bg-mobile: rgba(0,0,0,1);
 
 nav
 {
@@ -6,16 +7,18 @@ nav
 	margin: 0 auto;
   text-align: center;
   font-size: 1.5rem;
-  
+  margin-bottom: 0px;
 
-  background: $nav-bg;
+  background: $nav-bg-mobile;
+
+  @media only screen and (min-width:1024px) {
+    background: $nav-bg;
+  }
 
   &.navbar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 1000;
+    @media only screen and (min-width:1024px) {
+    }
+    margin-bottom: 0px;
 
     border-bottom: 1px solid yellow;
   }
@@ -27,7 +30,7 @@ nav
     filter: none !important;
     background-repeat: repeat-x;
 
-    background-color: $nav-bg;
+    background-color: $nav-bg-mobile;
 }
 
 .navbar

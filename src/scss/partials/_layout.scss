@@ -14,7 +14,8 @@
   display: none;
 }
 
-@media only screen and (min-width: 640px) {
+
+@media only screen and (min-width: 1024px) {
 
   .layout {
     padding: 60px 3rem;
@@ -48,14 +49,11 @@
       max-width: 49%;
     }
   }
+
 }
   
   /* etc */
 
-  .entry-layout, .layout {
-    top: 52px;
-    position: relative;
-  }
   
   body, html {
     margin: 0em;
@@ -75,6 +73,10 @@
   .col {
     background: #222;
     position: relative;
+
+    @media only screen and (max-width: 1023px) {
+      padding: 3rem;
+    }
 
   }
   
