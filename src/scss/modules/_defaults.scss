@@ -24,6 +24,50 @@ body,html{
   background: #000;
 }
 
+.content-info {
+  padding: 2.5rem;
+  background: white;
+  color: black;
+  margin: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  &.sunkiss {
+    background: #F2994A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  &.delicate {
+    background: #D3CCE3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  a {
+    margin-top: 1rem;
+    display: block;
+    padding: 2rem;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  ul.block-style {
+    text-align: left;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      border-bottom: 1px solid $orange;
+      padding: 0.5rem;
+      margin-bottom: .5rem;
+    }
+  }
+}
+
 @keyframes gracefulEntry {
   0% {
     opacity: 0

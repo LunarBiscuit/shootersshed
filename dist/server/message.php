@@ -131,11 +131,11 @@ $headers = 'From: '.$noreply_from."\r\n".
  
 <!-- include your own success html here -->
  
- 
+
  
 Thank you for contacting us. We will be in touch with you very soon.
 
-<a href='/index.php'>Click here to go back to the website.</a>
+<a title="Back to website" href='/'>Click here to go back to the website.</a>
  
  
  

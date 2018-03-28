@@ -5,6 +5,10 @@
     color: rgba(255,255,255,0.9);
     border-radius: 1px;
 
+    &:hover {
+        color: #aaa !important;
+    }
+
     &.dark {
         background: #000;
         color: #fff;

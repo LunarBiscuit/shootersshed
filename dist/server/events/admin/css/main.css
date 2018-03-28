@@ -823,7 +823,7 @@ footer
   color: #000;
 }
 
-.admin-panel
+.admin-panel, .timepicker, .timepicker-picker
 {
   color: #000;
 }

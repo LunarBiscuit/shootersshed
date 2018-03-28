@@ -2,11 +2,11 @@
 
 session_start();
 
-include_once("../header.html");
-include_once("../nav.php");
+include_once(__DIR__ . "/../header.html");
+include_once(__DIR__ . "/../nav.php");
 
 // Auth
-include_once("../../../auth.class.php");
+include_once(__DIR__ . "/../../../auth.class.php");
 
 $nav = new Nav("events");
 
@@ -17,13 +17,13 @@ if(!Auth::sessionCheck())
 {
 	Auth::drawAuthForm();
 
-	include("../footer.html");
+	include(__DIR__ . "/../footer.html");
 
 	exit();
 }
 
 // Event Class
-include_once("../../Event.class.php");
+include_once(__DIR__ . "/../../Event.class.php");
 
 $eventController = new EventController();
 
@@ -154,7 +154,7 @@ $events = $eventController->getAll("DESC");
 
 		var row = $(this).closest("tr");
 
-		$.get("/events/admin.php",{del: id}, function(resp)
+		$.get("/server/events/admin/lib/admin.php",{del: id}, function(resp)
 		{
 			// Delete the row
 			row.remove();
@@ -189,7 +189,7 @@ $events = $eventController->getAll("DESC");
 		$("#eventPrice").val(eventPrice);
 
 		$("#existingImage img").remove();
-		$("#existingImage").append("<img src='assets/img/events/"+eventImage+"' />");
+		$("#existingImage").append("<img src='/assets/img/events/"+eventImage+"' />");
 		$("#existingImage").removeClass("hidden");
 
 
@@ -220,6 +220,6 @@ $events = $eventController->getAll("DESC");
 
 <?PHP
 
-include("../footer.html");
+include(__DIR__ . "/../footer.html");
 
 ?>

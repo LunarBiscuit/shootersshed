@@ -1,20 +1,17 @@
 form {
 
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 
     fieldset {
         border: $orange;
         background-color: #FFF;
         color: #000; 
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 4rem;
         text-align: left;
-    }
-
-    h1 {
-        color: $orange;
+        max-width: 850px;
     }
 
     .well {
@@ -24,4 +21,19 @@ form {
         border-radius: 0;
         border: 0;
     }
+}
+
+.contact-details {
+    margin: 3rem auto;
+    text-align: left;
+    max-width: 1200px;
+    color: black;
+    background: white;
+    padding: 1rem;
+}
+
+.indented-content {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
 }

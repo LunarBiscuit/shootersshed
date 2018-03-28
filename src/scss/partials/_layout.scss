@@ -1,36 +1,54 @@
 /* Responsive: */
 
+.layout {
+  padding-top: 50px;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background-attachment: fixed;
+  padding: 4rem .5rem;
+  text-align: center;
+}
+
+.logo-header {
+  display: none;
+}
+
 @media only screen and (min-width: 640px) {
 
   .layout {
-    padding-top: 50px;
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;
-    background-attachment: fixed;
-    padding: 3em;
-    text-align: center;
+    padding: 60px 3rem;
   }
 
-    .entry-layout {
-      display: flex;
-      height: 100%;
+  .entry-layout {
+    display: flex;
+    height: 100%;
 
-      .img-overlay {
-        padding-top: 100px;
-        padding: 3em;
-        padding-top: 10rem;
-        text-align: center;
-        height: 100vh;
-        position: relative;
-      }
+    .img-overlay {
+      padding-top: 100px;
+      padding: 3em;
+      padding-top: 10rem;
+      text-align: center;
+      height: 100vh;
+      position: relative;
+    }
 
-      .textContainer {
-        max-width: 550px;
-        margin: 0 auto;
-      }
+    .textContainer {
+      max-width: 550px;
+      margin: 0 auto;
     }
   }
+
+  .logo-header {
+    margin: 0 auto;
+    display: block;
+    max-width: 400px;
+
+    img {
+      max-width: 49%;
+    }
+  }
+}
   
   /* etc */
   
@@ -47,15 +65,6 @@
     position: relative;
 
     font-size: 1.9rem;
-  }
-
-  .logo-header {
-    margin: 0 auto;
-    max-width: 400px;
-
-    img {
-      max-width: 49%;
-    }
   }
   
   .col {
@@ -117,6 +126,37 @@
 
   .img-overlay.dark::before {
     background: rgba(0,0,0,0.90);
+  }
+
+  .entry-img-container {
+    padding: 1rem;
+    max-width: 350px;
+    margin: 0 auto;
+    height: 200px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .space-out {
+    margin: 2rem 0;
+  }
+
+  .entry-info {
+    padding: 2rem;
+    background: rgba(0,0,0,0.1);
+    color: white;
+    text-align: left;
+    border: 1px dashed white;
+    max-width: 350px;
+    margin: 3rem auto;
+
+    a.button {
+      width: 100%;
+      margin: 1rem 0rem;
+      display: block;
+    }
   }
 
   .lead-img {

@@ -1,7 +1,7 @@
 <?PHP
 session_start();
 
-include_once(__DIR__ . "/server/db.class.php");  
+include_once("db.class.php");  
 
    
     

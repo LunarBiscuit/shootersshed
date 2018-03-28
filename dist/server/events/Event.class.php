@@ -1,7 +1,7 @@
 <?php
 
 
-include_once("../db.class.php");
+include_once(__DIR__."/../db.class.php");
 
 /* 
  * TODO
@@ -104,7 +104,7 @@ class EventController
 			return false;
 		}
 	
-		$uploaddir = __DIR__ . '../../assets/img/events/';
+		$uploaddir = __DIR__ . '/../../assets/img/events/';
         $uploadfile = $uploaddir . basename($_FILES['eventImage']['name']);
         $uploaded_size = $_FILES['eventImage']['size'];
         $uploaded_type = $_FILES['eventImage']['type'];

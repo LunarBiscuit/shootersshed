@@ -32,6 +32,41 @@ body, html {
   overflow: auto;
   background: #000; }
 
+.content-info {
+  padding: 2.5rem;
+  background: white;
+  color: black;
+  margin: 1rem;
+  max-width: 900px;
+  margin: 0 auto; }
+  .content-info.sunkiss {
+    background: #F2994A;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .content-info.delicate {
+    background: #D3CCE3;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  .content-info a {
+    margin-top: 1rem;
+    display: block;
+    padding: 2rem; }
+  .content-info h2 {
+    text-align: left; }
+  .content-info ul.block-style {
+    text-align: left;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0; }
+    .content-info ul.block-style li {
+      border-bottom: 1px solid #edc100;
+      padding: 0.5rem;
+      margin-bottom: .5rem; }
+
 @keyframes gracefulEntry {
   0% {
     opacity: 0; }
@@ -407,15 +442,21 @@ textarea {
   /* 2 */ }
 
 /* Responsive: */
+.layout {
+  padding-top: 50px;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background-attachment: fixed;
+  padding: 4rem .5rem;
+  text-align: center; }
+
+.logo-header {
+  display: none; }
+
 @media only screen and (min-width: 640px) {
   .layout {
-    padding-top: 50px;
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;
-    background-attachment: fixed;
-    padding: 3em;
-    text-align: center; }
+    padding: 60px 3rem; }
   .entry-layout {
     display: -ms-flexbox;
     display: flex;
@@ -429,7 +470,13 @@ textarea {
       position: relative; }
     .entry-layout .textContainer {
       max-width: 550px;
-      margin: 0 auto; } }
+      margin: 0 auto; }
+  .logo-header {
+    margin: 0 auto;
+    display: block;
+    max-width: 400px; }
+    .logo-header img {
+      max-width: 49%; } }
 
 /* etc */
 body, html {
@@ -443,12 +490,6 @@ body, html {
   height: 100%;
   position: relative;
   font-size: 1.9rem; }
-
-.logo-header {
-  margin: 0 auto;
-  max-width: 400px; }
-  .logo-header img {
-    max-width: 49%; }
 
 .col {
   background: #222;
@@ -503,6 +544,30 @@ body, html {
 .img-overlay.dark::before {
   background: rgba(0, 0, 0, 0.9); }
 
+.entry-img-container {
+  padding: 1rem;
+  max-width: 350px;
+  margin: 0 auto;
+  height: 200px; }
+  .entry-img-container img {
+    max-width: 100%; }
+
+.space-out {
+  margin: 2rem 0; }
+
+.entry-info {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: left;
+  border: 1px dashed white;
+  max-width: 350px;
+  margin: 3rem auto; }
+  .entry-info a.button {
+    width: 100%;
+    margin: 1rem 0rem;
+    display: block; }
+
 .lead-img {
   display: inline-block;
   text-align: center;
@@ -525,6 +590,50 @@ body, html {
   .bg-shed.dark {
     background-image: url("http://res.cloudinary.com/lunartech/image/upload/e_brightness:-90/v1510429850/ShootersShed/Shed9.jpg"); }
 
+.quad-grid {
+  display: -ms-grid;
+  display: grid;
+  /* Display as a Grid */
+  -ms-grid-columns: minmax(100px, 1fr) minmax(200px, 1fr);
+      grid-template-columns: minmax(100px, 1fr) minmax(200px, 1fr);
+  /*minmax = (min size, max size) = the minimum size the column should be is 200px, but if there's space then give them all 1fr of that width. */
+  grid-gap: 10px;
+  max-width: 900px;
+  margin: 2rem auto; }
+
+.booth-item {
+  color: white;
+  padding: 2rem;
+  min-height: 170px; }
+
+.booth-item:nth-child(1) {
+  background: #642B73;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #C6426E, #642B73);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.booth-item:nth-child(2) {
+  background: #fc00ff;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.booth-item:nth-child(3) {
+  background: #00b09b;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #96c93d, #00b09b);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.booth-item:nth-child(4) {
+  background: #C02425;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F0CB35, #C02425);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
 .logo {
   margin: -58px 0 0 -100px;
   position: absolute;
@@ -535,6 +644,7 @@ nav {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  font-size: 1.5rem;
   background: rgba(0, 0, 0, 0.8); }
   nav.navbar {
     position: absolute;
@@ -546,8 +656,7 @@ nav {
 
 .navbar-inverse {
   background-image: none !important;
-  -webkit-filter: none !important;
-          filter: none !important;
+  filter: none !important;
   background-repeat: repeat-x;
   background-color: rgba(0, 0, 0, 0.8); }
 
@@ -570,8 +679,7 @@ nav.navbar-inverse .navbar-nav > li > a {
 
 .navbar-inverse .navbar-nav > .active > a {
   background-image: none !important;
-  -webkit-filter: none !important;
-          filter: none !important;
+  filter: none !important;
   background-repeat: repeat-x;
   -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.2);
   background-color: #EDC100;
@@ -590,7 +698,10 @@ nav.navbar-inverse .navbar-nav > li > a {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto;
-      grid-template-rows: auto; }
+      grid-template-rows: auto;
+  /*.event-container:nth-child(1) {
+        grid-column: 1 / span 2;
+    };*/ }
   .event-items .event-container {
     padding: 0;
     min-height: 200px;
@@ -607,10 +718,6 @@ nav.navbar-inverse .navbar-nav > li > a {
       margin: 0;
       padding: 2px;
       font-size: 1.5em; }
-  .event-items .event-container:nth-child(1) {
-    -ms-grid-column-span: 2;
-    -ms-grid-column: 1;
-        grid-column: 1 / span 2; }
 
 .eventDate {
   color: #111;
@@ -666,7 +773,8 @@ nav.navbar-inverse .navbar-nav > li > a {
   -ms-grid-column-align: center;
       justify-items: center;
   width: 900px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 .portfolio {
   display: -ms-grid;
@@ -722,8 +830,6 @@ nav.navbar-inverse .navbar-nav > li > a {
     -ms-grid-column: span 3;
         grid-column: span 3; }
   .portfolio-item:hover {
-    color: white;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
     outline: 2px solid white; }
   .portfolio-item::before {
     content: '';
@@ -740,16 +846,40 @@ nav.navbar-inverse .navbar-nav > li > a {
     z-index: -1; }
   .portfolio-item:hover::before {
     opacity: 0.1;
-    border: 0px solid white; }
+    border: 0 solid white;
+    cursor: pointer; }
 
+#lightbox {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 100%; }
+  #lightbox .content {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    padding-top: 60px; }
+  #lightbox img {
+    max-width: 50%;
+    max-height: 75%; }
+
+/* Images */
 .poker {
-  background-image: url(http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/Poker.jpg); }
+  background-image: url("http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/Poker.jpg"); }
 
 .party-booth3 {
-  background-image: url(http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/Party_booth3.jpg); }
+  background-image: url("http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/Party_booth3.jpg"); }
 
 .shedoutside {
-  background-image: url(http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/SHED_outside_sign.jpg); }
+  background-image: url("http://res.cloudinary.com/lunartech/image/upload/c_scale,q_auto:good,w_900/v1510429824/ShootersShed/SHED_outside_sign.jpg"); }
 
 .upstairs-bar {
   background-image: url("http://res.cloudinary.com/lunartech/image/upload/v1510429857/ShootersShed/Upstairs_bar_to_shed.jpg"); }
@@ -766,19 +896,21 @@ nav.navbar-inverse .navbar-nav > li > a {
 .shooters-vip {
   background-image: url("http://res.cloudinary.com/lunartech/image/upload/v1510429841/ShootersShed/ShootersLtd2Party-18.jpg"); }
 
+.loyalty-card {
+  padding: .75em; }
+
 form {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto; }
   form fieldset {
     border: #edc100;
     background-color: #FFF;
     color: #000;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 4rem;
-    text-align: left; }
-  form h1 {
-    color: #edc100; }
+    text-align: left;
+    max-width: 850px; }
   form .well {
     background: #edc100;
     margin: 0;
@@ -786,12 +918,27 @@ form {
     border-radius: 0;
     border: 0; }
 
+.contact-details {
+  margin: 3rem auto;
+  text-align: left;
+  max-width: 1200px;
+  color: black;
+  background: white;
+  padding: 1rem; }
+
+.indented-content {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .button {
   border: 2px solid #ffffff;
   padding: 0.3rem 1rem;
   background: transparent;
   color: rgba(255, 255, 255, 0.9);
   border-radius: 1px; }
+  .button:hover {
+    color: #aaa !important; }
   .button.dark {
     background: #000;
     color: #fff;
@@ -803,6 +950,27 @@ form {
   src: url("../fonts/font-name.eot?#iefix") format("embedded-opentype"), url("../fonts/font-name.woff") format("woff"), url("../fonts/font-name.ttf") format("truetype"), url("../fonts/font-name.svg#font-name") format("svg");
   font-weight: normal;
   font-style: normal; }
+
+h1.mainHeader {
+  color: #edc100; }
+
+.entry-text {
+  min-height: 125px; }
+
+.content a {
+  margin-top: 1.2rem; }
+  .content a.orange {
+    color: black;
+    background: #edc100;
+    padding: 1rem; }
+  .content a.darken {
+    color: black;
+    background: rgba(0, 0, 0, 0.1); }
+
+.content .inline-link {
+  display: inline;
+  margin: initial;
+  padding: initial; }
 
 ::-moz-selection {
   background: #333;

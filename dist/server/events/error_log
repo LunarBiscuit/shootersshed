@@ -1,0 +1,8 @@
+[25-Nov-2017 09:03:26 America/Chicago] PHP Fatal error:  Class 'EventController' not found in /home2/nmos/public_html/otherwebsites/shootersAndShed/server/events/getEvents.php on line 5
+[25-Nov-2017 09:04:25 America/Chicago] PHP Warning:  include_once(../server/db.class.php): failed to open stream: No such file or directory in /home2/nmos/public_html/otherwebsites/shootersAndShed/server/events/Event.class.php on line 4
+[25-Nov-2017 09:04:25 America/Chicago] PHP Warning:  include_once(): Failed opening '../server/db.class.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home2/nmos/public_html/otherwebsites/shootersAndShed/server/events/Event.class.php on line 4
+[25-Nov-2017 09:04:25 America/Chicago] PHP Fatal error:  Class 'DB' not found in /home2/nmos/public_html/otherwebsites/shootersAndShed/server/events/Event.class.php on line 26
+[25-Nov-2017 09:05:53 America/Chicago] PHP Warning:  include_once(../server/db.class.php): failed to open stream: No such file or directory in /home2/nmos/public_html/otherwebsites/shootersAndShed/server/events/Event.class.php on line 4
+[25-Nov-2017 09:05:53 America/Chicago] PHP Warning:  include_once(): Failed opening '../server/db.class.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home2/nmos/public_html/otherwebsites/shootersAndShed/server/events/Event.class.php on line 4
+[25-Nov-2017 09:05:53 America/Chicago] PHP Fatal error:  Class 'DB' not found in /home2/nmos/public_html/otherwebsites/shootersAndShed/server/events/Event.class.php on line 26
+[25-Nov-2017 09:14:12 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/nmos/public_html/otherwebsites/shootersAndShed/server/events/getEvents.php on line 14

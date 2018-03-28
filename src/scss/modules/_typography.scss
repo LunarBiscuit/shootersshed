@@ -8,3 +8,34 @@
   font-weight: normal;
   font-style: normal;
 }
+
+h1.mainHeader {
+  color: $orange;
+}
+
+.entry-text {
+  min-height: 125px;
+}
+
+.content {
+  a {
+    margin-top: 1.2rem;
+  
+    &.orange {
+      color: black;
+      background: $orange;
+      padding: 1rem;
+    }
+
+    &.darken {
+      color: black;
+      background: rgba(0,0,0,0.1);
+    }
+  }
+
+  .inline-link {
+    display: inline;
+    margin: initial;
+    padding: initial;
+  }
+}
