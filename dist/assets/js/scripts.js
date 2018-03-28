@@ -4,7 +4,7 @@
  * https://LunarBiscuit.github.io/fastshell
  * @author Gareth Parker
  * @version 0.0.1
- * Copyright 2017. MIT licensed.
+ * Copyright 2018. MIT licensed.
  */
 (function ($, window, document, undefined) {
   'use strict'

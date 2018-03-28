@@ -5,17 +5,27 @@
     padding: 2%;
     min-height: 100vh;
     justify-items: center;
-    width: 900px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
+
+    @media only screen and (min-width:1024px) {
+      width: 900px;
+    }
   }
 
 .portfolio {
-  display: grid;
+
+  display: block;
   height: 100%;
-  grid-template-rows: repeat(9, 100px);
-  grid-template-columns: repeat(5, 150px);
-  grid-gap: 20px;
+
+  @media only screen and (min-width:1024px) {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(9, 100px);
+    grid-template-columns: repeat(5, 150px);
+    grid-gap: 20px;
+  }
   
 }
 
@@ -38,32 +48,11 @@
   position: relative;
   z-index: 10;
   transition: none;
-  
-  &.small {
-    grid-row: span 1;
-    grid-column: span 1;
-  }
-  
-  &.medium {
-    grid-row: span 2;
-    grid-column: span 2;
-  }
-  
-  &.large {
-    grid-row: span 3;
-    grid-column: span 3;
-  }
-  
-  &.tall {
-    grid-row: span 3;
-    grid-column: span 2;
-  }
-  
-  &.wide {
-    grid-row: span 2;
-    grid-column: span 3;
-  }
-    
+
+  overflow: hidden;
+  margin-bottom: 1rem;
+  height: 300px;
+
   &:hover {
     outline: 2px solid white;
   }
@@ -77,17 +66,75 @@
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     transition: all ease-in-out 300ms;
     z-index: -1;
+    
+    
   }
+
+  @media only screen and (min-width:1024px) {
+    height: inherit;
+    height: initial;
+    width: auto;
   
   &:hover::before {
     opacity: 0.1;
     border: 0 solid white;
     cursor: pointer;
+    
+    &.small {
+      grid-row: span 1;
+      grid-column: span 1;
+    }
+    
+    &.medium {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+    
+    &.large {
+      grid-row: span 3;
+      grid-column: span 3;
+    }
+    
+    &.tall {
+      grid-row: span 3;
+      grid-column: span 2;
+    }
+    
+    &.wide {
+      grid-row: span 2;
+      grid-column: span 3;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      background: #000;
+      border: 2px solid $orange;
+      opacity: 0.7;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: all ease-in-out 300ms;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 0.1;
+      border: 0px solid white;
+    }
   }
+    
+  
+
+  
+  
+  
 }
 
 #lightbox {
